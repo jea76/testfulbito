@@ -1,1 +1,72 @@
-<h1>Generar Equipos de Fútbol</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Equipos</title>
+    <style>
+        /* Añadir un poco de estilo */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .form-container {
+            display: inline-block;
+            text-align: left;
+        }
+        input, select {
+            margin: 10px 0;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Generar Equipos de Fútbol</h1>
+
+    <div class="form-container">
+        <label for="nombre">Nombre del jugador:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br>
+
+        <label for="habilidad">Habilidad del jugador (1-3):</label><br>
+        <select id="habilidad" name="habilidad" required>
+            <option value="1">1 - Menor habilidad</option>
+            <option value="2">2 - Media habilidad</option>
+            <option value="3">3 - Mayor habilidad</option>
+        </select><br>
+
+        <label for="posicion">Posición:</label><br>
+        <select id="posicion" name="posicion" required>
+            <option value="arquero">Arquero</option>
+            <option value="defensor">Defensor</option>
+            <option value="mediocampista">Mediocampista</option>
+            <option value="atacante">Atacante</option>
+        </select><br>
+
+        <button class="button" onclick="agregarJugador()">Agregar Jugador</button>
+    </div>
+
+    <div id="lista-jugadores">
+        <h2>Jugadores Agregados</h2>
+        <ul id="jugadores"></ul>
+    </div>
+
+    <button class="button" onclick="generarEquipos()">Generar Equipos</button>
+
+    <div id="resultado-equipos">
+        <h2>Equipos Generados</h2>
+        <div id="equipo1"></div>
+        <div id="equipo2"></div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
