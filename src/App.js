@@ -60,7 +60,7 @@ const App = () => {
 
     return (
         <div className="container mt-5">
-            <h1 className="text-center">Fulbito de los miércoles (Hay uno que se la come)</h1>
+            <h1 className="text-center">Fulbito de los miércoles (en desarrollo)</h1>
             <div className="card p-4 mt-4 shadow">
                 {error && <div className="alert alert-danger">{error}</div>}
                 <Form agregarJugador={agregarJugador} />
@@ -79,7 +79,7 @@ const App = () => {
 
             <div className="row mt-5">
                 <div className="col-md-6">
-                    <h3 className="text-center">Equipo 1</h3>
+                    <h3 className="text-center">Equipo Celeste y Blanca</h3>
                     <ul className="list-group">
                         {equipos.equipo1.map((jugador, index) => (
                             <li className="list-group-item" key={index}>
@@ -89,7 +89,7 @@ const App = () => {
                     </ul>
                 </div>
                 <div className="col-md-6">
-                    <h3 className="text-center">Equipo 2</h3>
+                    <h3 className="text-center">Equipo Lila</h3>
                     <ul className="list-group">
                         {equipos.equipo2.map((jugador, index) => (
                             <li className="list-group-item" key={index}>
